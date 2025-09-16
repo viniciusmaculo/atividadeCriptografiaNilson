@@ -114,7 +114,7 @@ function vigenereDescriptografar(texto, chave) {
 
 // Montando o HTML com cada etapa:
 
-function mostrarPassos(textoAtual, matriz, ordem, textoTransposto, textoFinal, chave) {
+function mostrarPassos(textoOriginal, matriz, ordem, textoTransposto, textoFinal, chave) {
   let container = document.getElementById("passos");
   container.innerHTML = ""; // limpar a div
 
