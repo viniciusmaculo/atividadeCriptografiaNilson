@@ -206,5 +206,5 @@ function descriptografar() {
 
   document.getElementById("resultado").value = textoOriginal;
 
-  document.getElementById("passos").innerHTML = "<div class='passo'><b>Resultado:</b> Texto original recuperado → " + textoOriginal + "</div>";
+  document.getElementById("passos").innerHTML = "<div class='passo'><b>Resultado:</b> Texto original recuperado -> " + textoOriginal + "</div>";
 }
