@@ -4,7 +4,7 @@ function transposicaoColunar(texto, chave) {
   let colunas = chave.length; // número de colunas vai ser o tamanho da chave
   let linhas = Math.ceil(texto.length / colunas); // calculo quantas linhas preciso (arredondando pra cima)
 
-  // Criar a matriz que vai receber os caracteres
+  // Matriz que vai receber os caracteres
   let matriz = [];
   let index = 0; // índice para andar pelo texto
   for (let i = 0; i < linhas; i++) {
@@ -112,7 +112,7 @@ function vigenereDescriptografar(texto, chave) {
   return resultado;
 }
 
-// Função para mostrar passos
+// Montando o HTML com cada etapa:
 
 function mostrarPassos(textoOriginal, matriz, ordem, textoTransposto, textoFinal, chave) {
   let container = document.getElementById("passos");
@@ -173,7 +173,7 @@ function mostrarPassos(textoOriginal, matriz, ordem, textoTransposto, textoFinal
 }
 
 
-// Processo Completo de Criptografar
+// Processo de Criptografar
 
 function criptografar() {
   let chave = document.getElementById("chave").value;
@@ -192,16 +192,16 @@ function criptografar() {
   mostrarPassos(textoOriginal, transposicao.matriz, transposicao.ordem, transposicao.texto, textoFinal, chave.toUpperCase());
 }
 
-// Processo Completo de Descriptografar
+// Processo de Descriptografar
 
 function descriptografar() {
   let chave = document.getElementById("chave").value;
   let textoCifrado = document.getElementById("textoOriginal").value.toUpperCase();
 
-  // 1) Primeiro desfaz o Vigenère
+  // 1) Primeiro desfazemos o Vigenère
   let textoDesvigenere = vigenereDescriptografar(textoCifrado, chave);
 
-  // 2) Depois desfaz a transposição colunar
+  // 2) Depois desfazemos a transposição colunar
   let textoOriginal = destransposicaoColunar(textoDesvigenere, chave);
 
   document.getElementById("resultado").value = textoOriginal;
