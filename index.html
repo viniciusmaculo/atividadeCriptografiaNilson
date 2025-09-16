@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Criptografia - Transposição + Vigenère</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" ></script>
+</head>
+<body>
+  <h1>Criptografia</h1>
+  <p>Transposição Colunar + Vigenère</p>
+
+  <label>Chave:</label><br>
+  <input type="text" id="chave" placeholder="Digite a chave"><br><br>
+
+  <label>Texto Original:</label><br>
+  <textarea id="textoOriginal" rows="4" cols="50"></textarea><br><br>
+
+  <button onclick="criptografar()">Criptografar</button>
+  <button onclick="descriptografar()">Descriptografar</button><br><br>
+
+  <label>Resultado Final:</label><br>
+  <textarea id="resultado" rows="4" cols="50" readonly></textarea>
+
+  <h2>Passo a Passo</h2>
+  <div id="passos"></div>
+</body>
+</html>

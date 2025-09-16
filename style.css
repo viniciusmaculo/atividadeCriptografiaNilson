@@ -1,0 +1,16 @@
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+td, th {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+  min-width: 20px;
+}
+.passo {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #444;
+  background: #f4f4f4;
+}
